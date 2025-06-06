@@ -16,9 +16,11 @@ class Room(models.Model):
         verbose_name_plural = "Rooms"
         ordering = ["number"]
 
-
+# room.booking_set
         
 class Booking(models.Model):
-    pass
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="bookins")
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name="bookins")
+
 
 
