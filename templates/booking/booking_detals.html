@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+
+
+    <h1> Booking #{{ booking.id }} </h1>
+    <p> User: {{ booking.username }} </p>
+    <p>Room: {{ booking .room }}</p>
+    <p> Time renge: {{ booking.start_time }} - {{ booking.end_time }}</p>
+
+{% endblock %}

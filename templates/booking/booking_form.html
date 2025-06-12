@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+{% block contexnt %}
+
+    <form method="POST" action="{% url 'book-room' %}">
+        {% csrf_token %}
+        <label for ="room-number"> room-number</label>
+        <input type="text" id="room-number" name="room-number">
+        <br>
+        <label for ="room-number"> satart-time</label>
+        <input type="datstime-local" id="start-time" name="room-number">
+        <br>
+        <label for ="room-number">End-time</label>
+        <input type="text" id="room-number" name="room-number">
+        <br>
+        <button type="submit">book this room</button>
+
+
+        </form>
+{% endblock %}
