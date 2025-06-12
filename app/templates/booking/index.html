@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        {{ all_text }}
+
+        {% if request.user.is_authenticated %}
+            <h1>HELLO, AUTHENTICATE</h1>
+        {% else %}
+            <h1>HELLO M UNANTEFICATED USER</h1>
+        {% endif %}
+    </p>
+    
+</body>
+</html>
