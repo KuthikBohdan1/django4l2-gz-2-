@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>
+{% extends "base.html" %}
+{% block content %}
+
+
         {{ all_text }}
 
         {% if request.user.is_authenticated %}
@@ -14,7 +9,5 @@
         {% else %}
             <h1>HELLO M UNANTEFICATED USER</h1>
         {% endif %}
-    </p>
-    
-</body>
-</html>
+        <a href="{% url 'rooms_list'%}">go to list</a>
+{% endblock %}

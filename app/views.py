@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+# from booking.models import 
 # Create your views here.
 
 def index(request):
@@ -14,4 +14,19 @@ def index(request):
         context=context,
         template_name="booking/index.html"
 
+    )
+
+
+def room_list(request):
+    rooms = Room.objects.all()
+    context = {
+
+        "rooms": rooms
+    }
+
+    return render(
+
+        request
+        template_name="booking/rooms_list.html,
+        context=context
     )
